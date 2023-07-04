@@ -1,7 +1,10 @@
 # Assignment Manager
 test
 
-## How to buiild
----
-* Make sure CMake is installed.
+## Requirements
+* C++ compiler with C++ 20 support 
+* CMake installed
+
+## How to build
+* Make sure CMake is installed
 * Build the project using CMake
