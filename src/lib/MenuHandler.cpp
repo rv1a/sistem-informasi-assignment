@@ -180,7 +180,7 @@ void MenuHandler::addDummyData() {
        .sudah_dikerjakan = false});
 
   _storage.tambahTugas(
-      {.name = "Test",
+      {.name = "Audio Recoding",
        .mata_kuliah = "Multimedia",
        .deadline = Datetime::ParseDateTimeString("5 juli 2023 22:00"),
        .sudah_dikerjakan = true});
