@@ -2,29 +2,30 @@
 #define SRC_LIB_MENUHANDLER
 
 #include "Stack2.hpp"
-#include "Tugas.hpp"
+#include "TugasBaru.hpp"
 #include "Utils.hpp"
 #include <optional>
 
 class UndoManager {
 private:
-  Stack2<Tugas::TugasStorage> _prev_state;
+  Stack2<Tugas::TugasManager> prev_state_;
 
 public:
-  void saveState(Tugas::TugasStorage storage_state);
+  void saveState(Tugas::TugasManager storage_state);
 
-  std::optional<Tugas::TugasStorage> popState();
+  std::optional<Tugas::TugasManager> popState();
 };
 
-// Wrapper class around TugasStorage that deals with user input.
+// Wrapper class around TugasManager that deals with user input.
 class MenuHandler {
 private:
-  Tugas::TugasStorage _storage;
-  UndoManager _undo_manager;
+  Tugas::TugasManager tugasManager_;
+  UndoManager undoManager_;
 
 public:
   void tampilkanTugas(Tugas::FilterGetTugas filter);
   void tambahTugas();
+  void tambahSubtugas();
   void updateNama();
   void updateMataKuliah();
   void updateDeadline();

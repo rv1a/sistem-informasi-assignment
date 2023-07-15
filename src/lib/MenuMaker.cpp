@@ -54,6 +54,7 @@ void MenuMaker::loop(bool clear_console_after_every_loop) {
     std::cout << "Press enter to continue...";
     // Utils::reset_cin_state();
     std::cin.get();
+    std::cout << std::endl;
 
     if (clear_console_after_every_loop) {
       system("cls");

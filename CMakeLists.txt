@@ -10,5 +10,7 @@ if (CCACHE_PROGRAM)
     set(CMAKE_CXX_COMPILER_LAUNCHER "${CCACHE_PROGRAM}" )
 endif()
 
-add_executable(sistem-informasi-2 src/main.cpp src/lib/MenuMaker.cpp src/lib/Utils.cpp src/lib/Tugas.cpp src/lib/Datetime.cpp src/lib/MenuHandler.cpp)
+add_executable(sistem-informasi-2 src/main.cpp src/lib/MenuMaker.cpp src/lib/Utils.cpp src/lib/TugasBaru.cpp src/lib/Datetime.cpp src/lib/MenuHandler.cpp)
 target_include_directories(sistem-informasi-2 PRIVATE src/lib)
+# add_executable(test src/test.cpp src/lib/TugasBaru.cpp src/lib/Datetime.cpp)
+# target_include_directories(test PRIVATE src/lib)

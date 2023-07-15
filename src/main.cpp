@@ -1,5 +1,5 @@
 #include "MenuHandler.hpp"
-#include "Tugas.hpp"
+#include "TugasBaru.hpp"
 #include <MenuMaker.hpp>
 #include <iostream>
 
@@ -14,6 +14,10 @@ int main() {
     submenu_maker.setJudul("Menu Kelola Tugas");
     submenu_maker.addMenu("Tambah tugas baru", [&handler]() {
       handler.tambahTugas();
+    });
+
+    submenu_maker.addMenu("Tambah subtugas", [&handler]() {
+      handler.tambahSubtugas();
     });
 
     submenu_maker.addMenu("Update tugas", [&handler]() {
